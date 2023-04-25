@@ -5,21 +5,20 @@
 using namespace std;
 
 int main() {
-    srand(time(0)); // Seed the random number generator
+    srand(time(0)); 
 char play = 'y';
 while (play == 'y'){
-    int playerScore = 0; // Initialize the player's score
-    int dealerScore = rand() % 11 + 16; // Generate a random dealer score between 16 and 21
+    int playerScore = 0; 
+    int dealerScore = rand() % 11 + 16; 
 
     cout << "Welcome to Blackjack!\n\n";
 
-    // Deal the player's first two cards
+    
     int card1 = rand() % 10 + 1;
     int card2 = rand() % 10 + 1;
     playerScore = card1 + card2;
     cout << "You were dealt a " << card1 << " and a " << card2 << ". Your score is " << playerScore << ".\n\n";
 
-    // Allow the player to hit or stand
     char choice;
     while (playerScore < 21) {
         cout << "Do you want to hit or stand? (h/s)\n";
@@ -34,7 +33,6 @@ while (play == 'y'){
         }
     }
 
-    // Determine the winner
     if (playerScore > 21) {
         cout << "Bust! You lose.\n";
     } else if (playerScore == 21) {
