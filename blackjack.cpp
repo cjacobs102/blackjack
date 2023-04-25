@@ -48,7 +48,7 @@ while (play == 'y'){
         } else {
         }
     }
-    cout << "You win!\nPlay again? (y/n) ";
+    cout << "Play again? (y/n) ";
     cin >> play;
 }
     return 0;
